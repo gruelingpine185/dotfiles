@@ -10,5 +10,9 @@ brew upgrade
 brew install git
 brew install iterm2
 
+# fonts
+brew tap homebrew/cask-fonts
+brew install font-fira-mono-nerd-font
+
 # remove outdated versions
 brew cleanup
