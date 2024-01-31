@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# export environment variables
+brew shellenv
+
 # update homebrew
 brew update
 
