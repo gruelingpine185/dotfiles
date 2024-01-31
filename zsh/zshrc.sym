@@ -1,0 +1,10 @@
+export ZSH="${HOME}/.dotfiles"
+export PATH="${ZSH}/bin:${PATH}"
+
+
+config_files=($ZSH/**/*.zsh)
+
+# source config files
+for src in $config_files; do
+  . "$src"
+done
