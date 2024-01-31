@@ -52,3 +52,17 @@ create_symlink() {
     exit 1
   fi
 }
+
+destroy_symlink() {
+  dest="$1"
+
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "deleting \'${dest}\'"
+  fi
+
+  if [[ -d "$dest" ]]; then
+    rm -rf "$dest"
+  else
+    unlink "$dest"
+  fi
+}
