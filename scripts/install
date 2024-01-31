@@ -66,3 +66,27 @@ destroy_symlink() {
     unlink "$dest"
   fi
 }
+
+cd "$(dirname "$0")/.."
+
+DOTFILE_ROOT="$(pwd -P)"
+
+while getopts fhs flag; do
+  case "${flag}" in
+    f)
+      opt_force=true
+      ;;
+    h)
+      print_help
+      exit 0
+      ;;
+    s)
+      opt_silent=true
+      ;;
+    *)
+      exit 1
+      ;;
+  esac
+done
+
+exit 0
