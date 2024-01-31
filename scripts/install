@@ -12,3 +12,12 @@ log_warn() {
 log_error() {
   printf "\x1b[31m[error]\x1b[0m: ${1}\n"
 }
+
+print_help() {
+  printf "Usage: $0 ./install [-f|-h|-s]
+
+Options:
+  -f  Force   Forces operations to proceed, ignoring warnings
+  -h  Help    Displays this help message
+  -s  Silent  Prevents output from being printed\n"
+}
