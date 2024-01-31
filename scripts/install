@@ -67,6 +67,19 @@ destroy_symlink() {
   fi
 }
 
+install_dotfiles() {
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "installing dotfiles"
+  fi
+
+  # create symlinks for each *.zsh file in the repository in the form of
+  # ~/.<dotfile>
+  for src in $(ls ${DOTFILE_ROOT}/**/*.zsh ${DOTFILE_ROOT}/**/*.sym); do
+    dest="${HOME}/.$(basename "${src%.*}")"
+    create_symlink "$src" "$dest" 
+  done
+}
+
 cd "$(dirname "$0")/.."
 
 DOTFILE_ROOT="$(pwd -P)"
@@ -89,4 +102,5 @@ while getopts fhs flag; do
   esac
 done
 
+install_dotfiles
 exit 0
