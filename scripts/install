@@ -21,3 +21,34 @@ Options:
   -h  Help    Displays this help message
   -s  Silent  Prevents output from being printed\n"
 }
+
+create_symlink() {
+  local src="$1"
+  local dest="$2"
+
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "linking \'${src}\' -> \'${dest}\'"
+  fi
+
+  if [[ -e "$dest" ]]; then
+    if [[ "$opt_force" == "true" ]]; then
+      rm -rf "$dest"
+    else
+      if [[ "$opt_silent" != "true" ]]; then
+        log_warn "file \'${dest}\' already exists"
+      fi
+
+      return
+    fi
+  fi
+
+  # remove symlink on error
+  if ! ln -s "$src" "$dest" &>/dev/null; then
+    if [[ "$opt_silent" != "true" ]]; then
+      log_error "failed to link \'${src}\' to \'${dest}\'"
+    fi
+
+    destroy_symlink "$dest"
+    exit 1
+  fi
+}
