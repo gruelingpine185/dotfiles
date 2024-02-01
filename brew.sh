@@ -17,6 +17,7 @@ brew install showkey
 brew install spaceship
 
 # graphical applications
+brew install --cask brave-browser
 brew install --cask github
 
 # fonts
