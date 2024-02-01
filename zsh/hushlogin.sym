@@ -1,0 +1,7 @@
+# disables login output such as last session time, date, and other information
+# shown upon opening a new tab or window.
+# To disable this, you may delete the symlink to ~/.hushlogin, however, the
+# symlink will be created again the next time `./$ZSH/scripts/install` is ran.
+# To perminently delete it,
+#   1. Delete the symlink file: ~/.hushlogin
+#   2. Delete the file: $ZSH/zsh/hushlogin.sym
