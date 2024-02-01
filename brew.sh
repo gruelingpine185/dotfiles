@@ -12,6 +12,7 @@ brew upgrade
 # terminal programs
 brew install git
 brew install iterm2
+brew install spaceship
 
 # graphical applications
 brew install --cask github

@@ -8,3 +8,6 @@ config_files=($ZSH/**/*.zsh)
 for src in $config_files; do
   . "$src"
 done
+
+# initialize spaceship prompt
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
