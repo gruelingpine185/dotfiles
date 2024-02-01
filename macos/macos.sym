@@ -1,0 +1,21 @@
+# (default: undefined) means that that particulat setting was not set
+# Reverting changes follows the following outline
+#
+# defaults delete <domain> [key] 
+#
+# See `man defaults` for more information
+
+
+# Dock
+
+# hide the dock automatically (default: false)
+defaults write com.apple.dock autohide -bool true
+
+# remove the dock animation delay (default: undefined)
+defaults write com.apple.dock autohide-delay -float 0.1
+
+# set the dock animation duration (default: undefined)
+defaults write com.apple.dock autohide-time-modifier -float 0.4
+
+# restart dock
+killall Dock
