@@ -1,5 +1,12 @@
 # -- Spaceship --
 
+SPACESHIP_PROMPT_ORDER=(
+  dir    # current directory
+  git    # git status & git branch
+  sudo   # sudo indicator
+  char   # prompt character
+)
+
 # add newline after each prompt (default: true)
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 
