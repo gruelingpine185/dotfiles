@@ -1,3 +1,4 @@
+alias ga="git add"
 alias gb="git branch"
 alias gc="git commit -m"
 alias gca="git add --all && git commit -m"
