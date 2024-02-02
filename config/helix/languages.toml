@@ -1,0 +1,28 @@
+use-grammars = { only = ["c", "cpp", "sh"] }
+
+[[language]]
+name = "c"
+scope = "source.c"
+injection-regex = "c"
+file-types = ["h", "c"]
+roots = []
+comment-token = "//"
+language-server = { command = "clangd" }
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "bash"
+scope = "source.bash"
+injection-regex = "(shell|bash|zsh|sh)"
+file-types = [
+  "sh", "bash", "zsh", ".bash_login",
+  ".bash_logout", ".bash_profile", ".bashrc",
+  ".profile", ".zshenv", ".zlogin", ".zlogout",
+  ".zprofile", ".zshrc", "APKBUILD", "PKGBUILD",
+  "eclass", "ebuild", "bazelrc"
+]
+shebangs = ["sh", "bash", "dash"]
+roots = []
+comment-token = "#"
+language-server = { command = "bash-language-server", args = ["start"] }
+indent = { tab-width = 2, unit = "  " }
