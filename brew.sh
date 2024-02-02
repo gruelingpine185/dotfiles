@@ -16,6 +16,9 @@ brew install iterm2
 brew install showkey
 brew install spaceship
 
+# language servers
+brew install bash-language-server
+
 # graphical applications
 brew install --cask brave-browser
 brew install --cask github
