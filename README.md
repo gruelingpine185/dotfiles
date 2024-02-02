@@ -5,12 +5,14 @@
 ```sh
 git clone https://github.com/gruelingpine185/dotfiles ~/.dotfiles
 cd ~/.dotfiles
-./scripts/install
+./scripts/dotfiles -i
+zsh
 ```
 
 ## Uninstallation
 
 ```sh
 cd ~/.dotfiles
-./scripts/uninstall
+./scripts/dotfiles -u
+zsh
 ```
