@@ -12,6 +12,20 @@ log_warn() {
 log_error() {
   printf "\x1b[31m[error]\x1b[0m: ${1}\n"
 }
+
+print_help() {
+  printf "Usage: $0 [modifier] [option]
+
+Modifier:
+  -f  Force       Forces operations to proceed, ignoring warnings
+  -s  Silent      Prevents output from being printed
+
+Options:
+  -h  Help        Displays help message
+  -i  Install     Installs symlinks for various files in `$DOTFILE_PATH`
+  -u  Uninstall   Uninstalls created symlinks\n"
+}
+
 create_symlink() {
   local src="$1"
   local dest="$2"
