@@ -93,12 +93,38 @@ uninstall_dotfiles() {
   done
 }
 
+install_config_files() {
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "installing config files"
+  fi
+
+  for dir in $(ls ${dotfile_path}/config); do
+    src="${dotfile_path}/config/${dir}"
+    if [ -d "$src" ]; then
+      dest="${HOME}/.config/${dir}"
+      create_symlink "$src" "$dest" 
+    fi
+  done
+}
+
+uninstall_config_files() {
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "uninstalling config files"
+  fi
+
+  for dir in $(ls ${dotfile_path}/config); do
+    if [ -d "${dotfile_path}/config/${dir}" ]; then
+      dest="${HOME}/.config/${dir}"
+      destroy_symlink "$dest" 
+    fi
+  done
+}
+
 remove_env_variables() {
   [[ -z "$DOTFILE_PATH" ]] && return || unset DOTFILE_PATH
 }
 
 dotfile_path="$(cd -- "$(dirname "$0")/.." >/dev/null 2>&1; pwd -P)"
-echo $dotfile_path
 cd "$dotfile_path"
 
 while getopts fhisu flag; do
@@ -112,12 +138,14 @@ while getopts fhisu flag; do
       ;;
     i)
       install_dotfiles
+      install_config_files
       ;;
     s)
       opt_silent=true
       ;;
     u)
       uninstall_dotfiles
+      uninstall_config_files
       remove_env_variables
       ;;
     *)
