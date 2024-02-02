@@ -1,3 +1,6 @@
+if [[ -z $DOTFILE_PATH ]]; then
+  export DOTFILE_PATH="${HOME}/.dotfiles"
+fi
 
 config_files=(${DOTFILE_PATH}/**/*.zsh)
 
