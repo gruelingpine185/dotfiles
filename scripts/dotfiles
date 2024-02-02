@@ -52,3 +52,29 @@ destroy_symlink() {
 
   rm -rf "$dest"
 }
+
+install_dotfiles() {
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "installing dotfiles"
+  fi
+
+  # create symlinks for each *.sym file in the repository in the form of
+  # ~/.<dotfile>
+  for src in $(ls ${dotfile_path}/**/*.sym); do
+    dest="${HOME}/.$(basename "${src%.*}")"
+    create_symlink "$src" "$dest" 
+  done
+}
+
+uninstall_dotfiles() {
+  if [[ "$opt_silent" != "true" ]]; then
+    log_info "uninstalling dotfiles"
+  fi
+
+  # deleting createed symlinks for each *.sym file in the repository in the form of
+  # ~/.<dotfile>
+  for src in $(ls ${dotfile_path}/**/*.sym); do
+    dest="${HOME}/.$(basename "${src%.*}")"
+    destroy_symlink "$dest"
+  done
+}
