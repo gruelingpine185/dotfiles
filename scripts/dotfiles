@@ -78,3 +78,7 @@ uninstall_dotfiles() {
     destroy_symlink "$dest"
   done
 }
+
+remove_env_variables() {
+  [[ -z "$DOTFILE_PATH" ]] && return || unset DOTFILE_PATH
+}
