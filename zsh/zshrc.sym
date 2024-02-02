@@ -4,10 +4,14 @@ fi
 
 config_files=(${DOTFILE_PATH}/**/*.zsh)
 
+# source path files
+for src in $config_files; do
+  [[ "${src##*/}" == "paths.zsh" ]] && . "$src" || continue 
+done
 
 # source config files
 for src in $config_files; do
-  . "$src"
+  [[ "${src##*/}" != "paths.zsh" ]] && . "$src" || continue 
 done
 
 # initialize spaceship prompt
