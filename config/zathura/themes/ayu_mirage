@@ -7,6 +7,9 @@ set inputbar-fg "#cbccc6"
 set statusbar-bg "#191e2a"
 set statusbar-fg "#cbccc6"
 
+set highlight-color "#565B66"
+set highlight-active-color "#ffad66"
+
 set index-bg "#1f2430"
 set index-fg "#cbccc6"
 set index-active-bg "#565b66"
