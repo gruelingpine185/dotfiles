@@ -16,6 +16,7 @@ brew install girara --HEAD
 brew install git
 brew install helix
 brew install iterm2
+brew install pkg-config
 brew install zathura-pdf-poppler
 brew install showkey
 brew install spaceship
