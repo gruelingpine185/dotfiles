@@ -1,5 +1,5 @@
 # local configs
-*.local.zsh
+local.zsh
 
 # macos
 .DS_Store
