@@ -7,6 +7,11 @@ set inputbar-fg "#cbccc6"
 set statusbar-bg "#191e2a"
 set statusbar-fg "#cbccc6"
 
+set index-bg "#1f2430"
+set index-fg "#cbccc6"
+set index-active-bg "#565b66"
+set index-active-fg "#cbccc6"
+
 set completion-bg "#191e2a"
 set completion-fg "#cbccc6"
 set completion-highlight-bg "#565b66"
