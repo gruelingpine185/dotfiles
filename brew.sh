@@ -12,6 +12,7 @@ brew upgrade
 brew tap zegervdv/zathura
 
 # terminal programs
+brew install bear
 brew install girara --HEAD
 brew install git
 brew install helix
