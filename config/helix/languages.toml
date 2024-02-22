@@ -1,4 +1,4 @@
-use-grammars = { only = ["c", "cpp", "bash"] }
+use-grammars = { only = ["bash", "c", "cpp", "D"] }
 
 
 [[language]]
