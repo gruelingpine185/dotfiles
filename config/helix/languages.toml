@@ -5,6 +5,10 @@ use-grammars = { only = ["bash", "c", "cpp", "D"] }
 name = "c"
 indent = { tab-width = 4, unit = "    " }
 
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
+
 [language-server.clangd]
 args = ["-header-insertion=never"]
 
