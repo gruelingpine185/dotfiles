@@ -1,4 +1,4 @@
-theme = "ayu_mirage"
+theme = "gruvbox_transparent"
 
 [editor]
 line-number = "relative"
