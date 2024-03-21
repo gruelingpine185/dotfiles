@@ -1,4 +1,4 @@
-include themes/ayu_mirage
+include themes/gruvbox/gruvbox_dark
 
 set font "FiraMono Nerd Font Mono normal 12"
 
