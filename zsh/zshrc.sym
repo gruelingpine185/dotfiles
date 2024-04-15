@@ -1,14 +1,11 @@
-if [[ -z $DOTFILE_PATH ]]; then
+if [[ -z "$DOTFILE_PATH" ]]; then
   export DOTFILE_PATH="${HOME}/.dotfiles"
 fi
 
 # makes sure to use set homebrew prefix if not already exported
-if [[ -z "$HOMEBREW_PREFIX" ]]; then
-  export HOMEBREW_PREFIX=$(brew config | grep "HOMEBREW_PREFIX" | tr ": " "\n" | tail -1)
-fi
-
-# zsh autocompletinos
-. "${HOMEBREW_PREFIX}/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+#if [[ -z "$HOMEBREW_PREFIX" ]]; then
+#  export HOMEBREW_PREFIX=$(brew config | grep "HOMEBREW_PREFIX" | tr ": " "\n" | tail -1)
+#fi
 
 config_files=(${DOTFILE_PATH}/**/*.zsh)
 
