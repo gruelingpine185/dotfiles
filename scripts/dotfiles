@@ -44,6 +44,8 @@ create_symlink() {
 
       return
     fi
+  else
+    mkdir $(dirname "${dest}")
   fi
 
   # remove symlink on error
