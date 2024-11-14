@@ -17,11 +17,14 @@ brew install girara --HEAD
 brew install git
 brew install helix
 brew install iterm2
+brew install koekeishiya/formulae/skhd
+brew install koekeishiya/formulae/yabai
+brew install neovim
 brew install pkg-config
-brew install zathura-pdf-poppler
 brew install showkey
 brew install spaceship
 brew install zathura --HEAD
+brew install zathura-pdf-poppler
 
 # language servers
 brew install bash-language-server
@@ -29,6 +32,8 @@ brew install bash-language-server
 # graphical applications
 brew install --cask brave-browser
 brew install --cask github
+brew install --cask discord
+brew install --cask mactex-no-gui
 
 # fonts
 brew tap homebrew/cask-fonts
