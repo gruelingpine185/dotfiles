@@ -10,9 +10,11 @@ brew update
 brew upgrade
 
 brew tap zegervdv/zathura
+brew tap FelixKratz/formulae
 
 # terminal programs
 brew install bear
+brew install borders
 brew install girara --HEAD
 brew install git
 brew install helix
@@ -22,6 +24,7 @@ brew install koekeishiya/formulae/yabai
 brew install neovim
 brew install pkg-config
 brew install showkey
+brew install sketchybar
 brew install spaceship
 brew install zathura --HEAD
 brew install zathura-pdf-poppler
