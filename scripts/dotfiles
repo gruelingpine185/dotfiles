@@ -44,9 +44,7 @@ create_symlink() {
 
       return
     fi
-  else
-    mkdir $(dirname "${dest}")
-  fi
+ fi
 
   # remove symlink on error
   if ! ln -s "$src" "$dest" &>/dev/null; then
@@ -99,6 +97,10 @@ install_config_files() {
   if [[ "$opt_silent" != "true" ]]; then
     log_info "installing config files"
   fi
+
+  if [[ ! -e "$(dirname "${dest}")" ]]; then
+    mkdir $(dirname "${dest}")
+  fi 
 
   for dir in $(ls ${dotfile_path}/config); do
     src="${dotfile_path}/config/${dir}"
