@@ -12,7 +12,7 @@ yabai -m config \
   focus_follows_mouse off \
   mouse_follows_focus off \
   window_shadow on \
-  external_bar all:48:0
+  external_bar all:40:0
 
 yabai -m rule --add app="^(System Settings|System Information|Activity Monitor|FaceTime|Screen Sharing|Calculator)$" manage=off
 
