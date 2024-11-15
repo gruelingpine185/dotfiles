@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+yabai -m config \
+  debug_output on \
+  layout bsp \
+  window_placement second_child \
+  top_padding 10 \
+  bottom_padding 10 \
+  left_padding 10 \
+  right_padding 10 \
+  window_gap 10 \
+  focus_follows_mouse off \
+  mouse_follows_focus off \
+  window_shadow on \
+  external_bar all:48:0
+
+yabai -m rule --add app="^(System Settings|System Information|Activity Monitor|FaceTime|Screen Sharing|Calculator)$" manage=off
+
+borders &
+
+echo "yabai configuration loaded.."
