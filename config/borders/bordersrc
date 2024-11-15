@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+
+source "${HOME}/.dotfiles/themes/theme.zsh"
+source "${HOME}/.dotfiles/themes/${THEME}.zsh"
+
+borders \
+	style=round \
+	width=5.0 \
+	hidpi=on \
+	active_color=$THEME_ACCENT \
+	inactive_color=$THEME_FG
