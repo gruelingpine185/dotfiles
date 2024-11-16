@@ -23,6 +23,7 @@ brew install koekeishiya/formulae/skhd
 brew install koekeishiya/formulae/yabai
 brew install neovim
 brew install pkg-config
+brew install scc
 brew install showkey
 brew install sketchybar
 brew install spaceship
