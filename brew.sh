@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # export environment variables
 brew shellenv
@@ -28,7 +28,9 @@ brew install sketchybar
 brew install spaceship
 brew install zathura --HEAD
 brew install zathura-pdf-poppler
-
+brew install zsh-autocomplete
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
 # language servers
 brew install bash-language-server
 
