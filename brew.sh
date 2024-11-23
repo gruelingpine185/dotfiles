@@ -26,6 +26,8 @@ brew install pkg-config
 brew install scc
 brew install showkey
 brew install sketchybar
+brew install slides
+brew install graph-easy
 brew install spaceship
 brew install zathura --HEAD
 brew install zathura-pdf-poppler
