@@ -42,6 +42,7 @@ brew install --cask brave-browser
 brew install --cask github
 brew install --cask discord
 brew install --cask mactex-no-gui
+brew install --cask sioyek
 
 # fonts
 brew tap homebrew/cask-fonts
