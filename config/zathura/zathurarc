@@ -1,5 +1,7 @@
 include themes/gruvbox/gruvbox_dark
 
+set database sqlite
+
 set font "FiraMono Nerd Font Mono normal 12"
 
 set window-title-basename "true"
