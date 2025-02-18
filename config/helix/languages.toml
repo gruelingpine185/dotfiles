@@ -1,4 +1,4 @@
-use-grammars = { only = ["bash", "c", "cpp", "D"] }
+use-grammars = { only = ["bash", "c", "cpp", "D", "python"] }
 
 
 [[language]]
@@ -15,3 +15,9 @@ args = ["-header-insertion=never"]
 [[language]]
 name = "bash"
 indent = { tab-width = 2, unit = "  " }
+
+[[language]]
+name = "python"
+indent = { tab-width = 2, unit = "  " }
+
+[language-server.pylsp]
