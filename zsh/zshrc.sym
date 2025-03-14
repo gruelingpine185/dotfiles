@@ -21,9 +21,23 @@ done
 
 # initialize spaceship prompt
 source $(brew --prefix)/opt/spaceship/spaceship.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # supporess fsanitizer warnings
 export MallocNanoZone='0'
+
+# fzf shell integration
+source <(fzf --zsh)
+
+# forgit
+[ -f $HOMEBREW_PREFIX/share/forgit/forgit.plugin.zsh ] && source $HOMEBREW_PREFIX/share/forgit/forgit.plugin.zsh
+
+source $(brew --prefix)/etc/profile.d/z.sh
+unalias z 2> /dev/null
+z() {
+  local dir=$(
+    _z 2>&1 |
+    fzf --height 40% --layout reverse --info inline \
+        --nth 2.. --tac --no-sort --query "$*" \
+        --bind 'enter:become:echo {2..}'
+  ) && cd "$dir"
+}
